@@ -1,0 +1,457 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "GFS Neohellenic", sans-serif;
+    scroll-behavior: smooth ;
+}
+.agba-wrapper{
+  padding-top: 60px;
+}
+.input-container {
+  width: 220px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  top: calc(50% + 5px);
+  transform: translateY(calc(-50% - 5px));
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  transition: .2s linear;
+  border: 2.5px solid black;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.input:focus {
+  outline: none;
+  border: 0.5px solid black;
+  box-shadow: -5px -5px 0px rgb(250, 177, 41);
+}
+
+.input-container:hover > .icon {
+  animation: anim 1s linear infinite;
+}
+
+@keyframes anim {
+  0%,
+  100% {
+    transform: translateY(calc(-50% - 5px)) scale(1);
+  }
+
+  50% {
+    transform: translateY(calc(-50% - 5px)) scale(1.1);
+  }
+}
+
+
+header {
+    background-color: black;
+  }
+  .navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    text-transform: uppercase;
+    padding-right: 70px;
+  }
+  .nav-branding {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(250, 177, 41);
+    padding-left: 138px;
+  }
+  .navbar ul li a {
+    text-decoration: none;
+    color: rgb(250, 177, 41);
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .navbar ul li a:hover {
+    border: 2px solid rgb(250, 177, 41);
+    padding: 7px;
+    transition: .1s ease-out;
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(250, 177, 41);
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .nav-branding {
+      font-size: 20px;
+      position: relative; right: 60px;
+      text-align: center;
+      /* padding-left: 0px; */
+    }
+  
+    .hamburger {
+      display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      background-color: black;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      z-index: 1000;
+      padding-right: 0px;
+    }
+    .nav-items {
+      margin: 25px 0;
+    }
+    .nav-menu.active {
+      left: 0;
+    }
+    .bg {
+      width: 100%;
+    }
+  }
+
+
+
+.section{
+    width: 100%;
+    background-color: white;
+    padding-top: 120px;
+}
+.get{
+    line-height: 1.2;
+}
+.get h1{
+  font-size: 55px;
+  color: black;
+  text-align: center;
+}
+.get span{
+    color: rgb(250, 177, 41);
+}
+.we{
+    padding-top: 12px;
+}
+.we p{
+    font-size: 25px;
+    color: black;
+    text-align: center;
+}
+@media only screen and (max-width:900px) {
+  .get{
+    line-height: 1;
+}
+.get h1{
+  font-size: 50px;
+}
+.we{
+    padding-top: 22px;
+}
+.we p{
+    font-size: 20px;
+}
+}
+
+
+.container{
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+.container h1{
+  font-size: 55px;
+  color: black;
+}
+.container span{
+  color: rgb(250, 177, 41);
+}
+.container .wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+.container .wrapper .box{
+  max-width: 30%;
+  cursor: pointer;
+  background-color: white;
+  margin: 55px 0 0 20px;
+  transition: .1s ease-in-out;
+}
+.container .wrapper .box:hover{
+  outline: 3px solid rgb(250, 177, 41);
+}
+.container .wrapper .box .img{
+  padding-top: 30px;
+  transition: .2s ease-in-out;
+}
+.container .wrapper .box .img img{
+  width: 60%;
+}
+.container .wrapper .box .img img:hover{
+  transform: scale(.9);
+}
+.container .wrapper .box .button h2{
+  padding-bottom: 20px;
+}
+.container .wrapper .box .button{
+  text-align: center;
+  margin: 20px 0 20px 0;
+}
+.container .wrapper .box .button button{
+  background-color: rgb(250, 177, 41);
+  padding: 15px 15px;
+  color: white;
+  font-size: 20px;
+  border: 1px solid rgb(250, 177, 41);
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+.container .wrapper .box .button button:hover{
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width:900px){
+  .container .wrapper{
+    flex-direction: column;
+  }
+  .container .wrapper .box .button button{
+    padding: 5px 5px;
+    font-size: 15px;
+  }
+  .container h1{
+    font-size: 40px;
+    margin: 0 20px 0 20px;
+  }
+  .container .wrapper{
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+  .container .wrapper .box{
+    max-width: 70%;
+    margin: 30px 0 0 20px;
+  }
+}
+
+
+.container .wrapper1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+.container .wrapper1 .box1{
+  max-width: 30%;
+  cursor: pointer;
+  background-color: white;
+  margin: 55px 0 0 20px;
+  transition: .2s ease-in-out;
+}
+.container .wrapper1 .box1:hover{
+  outline: 3px solid rgb(250, 177, 41);
+}
+.container .wrapper1 .box1 .img1{
+  padding-top: 30px;
+  transition: .2s ease-in-out;
+}
+.container .wrapper1 .box1 .img1 img{
+  width: 60%;
+}
+.container .wrapper1 .box1 .img1 img:hover{
+  transform: scale(.9);
+}
+.container .wrapper1 .box1 .button1 h2{
+  padding-bottom: 20px;
+}
+.container .wrapper1 .box1 .button1{
+  text-align: center;
+  margin: 20px 0 20px 0;
+}
+.container .wrapper1 .box1 .button1 button{
+  background-color: rgb(250, 177, 41);
+  padding: 15px 15px;
+  color: white;
+  font-size: 20px;
+  border: 1px solid rgb(250, 177, 41);
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+.container .wrapper1 .box1 .button1 button:hover{
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width:900px){
+  .container .wrapper1{
+    flex-direction: column;
+  }
+  .container .wrapper1 .box1 .button1 button{
+    padding: 5px 5px;
+    font-size: 15px;
+  }
+  .container .wrapper1{
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+  .container .wrapper1 .box1{
+    max-width: 70%;
+    margin: 30px 0 0 20px;
+  }
+}
+
+
+
+
+.contain {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  background-color: #24262b;
+  padding: 70px 0px;
+  
+}
+.footer-col {
+  width: 33.3%;
+  padding: 0 0 0 90px;
+}
+.footer-col h4 {
+  font-size: 24px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 19px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  background-image: url(vampire-facelift-facial-at-rn-esthetics_l_1200x800-1170x658.jpeg);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+#fl {
+  font-size: 30px;
+  position: relative;
+  top: 12px;
+}
+.hr{
+  position: relative; top: 40px;
+}
+.ending {
+  text-align: center;
+  position: relative; top: 50px;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+    padding-right: 50px;
+  }
+  .footer {
+    padding: 70px 0px; 
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
+
+
