@@ -186,8 +186,9 @@ header {
 }
 .content .left-side .details .text-one,
 .content .left-side .details .text-two{
-  font-size: 14px;
-  color: #afafb6;
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
 }
 .container .content .right-side {
   width: 75%;

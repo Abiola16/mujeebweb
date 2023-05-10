@@ -7,6 +7,12 @@
   font-family: "GFS Neohellenic", sans-serif;
   scroll-behavior: smooth;
 }
+.customer-reviews{
+  font-size: 38px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
 header {
   background-color: black;
 }
